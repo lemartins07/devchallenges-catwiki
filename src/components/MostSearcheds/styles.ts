@@ -42,6 +42,23 @@ export const Gallery = styled.div`
   gap: 0.5rem;
   align-items: center;
 
+  & div:first-child {
+    position: relative;
+  }
+
+  & div:first-child::after {
+    content: '';
+    width: 4px;
+    height: 100px;
+    background-color: ${(props) => props.theme['yellow-500']};
+    position: absolute;
+    top: 17px;
+    left: -4px;
+    z-index: 0;
+    border-top-left-radius: 4rem;
+    border-bottom-left-radius: 4rem;
+  }
+
   div {
     img {
       width: 134px;
