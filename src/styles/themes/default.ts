@@ -11,8 +11,9 @@ export const defaultTheme = {
 
   'yellow-500': '#DEC68B',
 
-  'font-title-xl': '4rem',
-  'font-title-l': '3rem',
+  'font-title-xxl': '4rem',
+  'font-title-xl': '3rem',
+  'font-title-l': '2.5rem',
   'font-title-m': '1.5rem',
   'font-title-s': '1.25rem',
   'font-title-xs': '1.125rem',

@@ -9,6 +9,8 @@ export const MostSearchedsContainer = styled.section`
   flex-direction: column;
   gap: 1.5rem;
 
+  margin-bottom: 4rem;
+
   strong {
     color: ${(props) => props.theme['gray-800']};
     font-family: ${(props) => props.theme['font-normal']};

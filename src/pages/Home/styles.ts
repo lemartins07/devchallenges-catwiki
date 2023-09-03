@@ -66,3 +66,72 @@ export const HeroImage = styled.div`
     border-top-right-radius: 3rem;
   }
 `
+export const WhyHaveCat = styled.section`
+  h2 {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    font-size: ${(props) => props.theme['font-title-l']};
+    font-family: ${(props) => props.theme['font-normal']};
+    font-weight: 700;
+    line-height: normal;
+    margin-bottom: 2.5rem;
+
+    &::before {
+      content: '';
+      width: 40px;
+      height: 3px;
+      background-color: ${(props) => props.theme['gray-600']};
+    }
+  }
+
+  p {
+    color: ${(props) => props.theme['gray-800']};
+    font-family: ${(props) => props.theme['font-normal']};
+    font-size: ${(props) => props.theme['font-text-l']};
+    font-weight: 500;
+    line-height: normal;
+    margin-bottom: 1.5rem;
+  }
+`
+
+export const BtnReadMore = styled.a`
+  color: ${(props) => props.theme['gray-700']};
+  font-family: ${(props) => props.theme['font-normal']};
+  font-size: ${(props) => props.theme['font-text-s']};
+  font-weight: 700;
+  line-height: normal;
+
+  background: none;
+  border: none;
+
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+`
+
+export const Gallery = styled.div`
+  margin-top: 4rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+
+  img {
+    max-width: 100%;
+  }
+
+  & img:first-child {
+    grid-row: 1/1;
+  }
+
+  & img:nth-child(2) {
+    grid-row: 1/3;
+    max-width: 150px;
+  }
+
+  & img:nth-child(3) {
+    max-width: 122px;
+    justify-self: flex-end;
+  }
+`
