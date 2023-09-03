@@ -1,13 +1,20 @@
 import { FooterContainer } from './styles'
-import catWikiLogo from '../../assets/CatwikiLogo.svg'
+import catWikiLogoWhite from '../../assets/CatwikiLogoWhite.svg'
 
 export function Footer() {
   return (
     <FooterContainer>
-      <img src={catWikiLogo} alt="Logo" />
+      <img src={catWikiLogoWhite} alt="Logo" />
       <div>
         <p>
-          © created by <span>username</span> - <span>devChallenge.io</span>{' '}
+          <span className="copyright">©</span> created by{' '}
+          <a className="user" href="#">
+            username
+          </a>{' '}
+          -{' '}
+          <a className="devchallenge" href="#">
+            devChallenge.io
+          </a>{' '}
           2021
         </p>
       </div>
