@@ -2,7 +2,6 @@ import { styled } from 'styled-components'
 
 export const HomeContainer = styled.div`
   max-width: 1248px;
-  min-height: calc(100vh - 180px);
 `
 export const Hero = styled.section`
   display: flex;
@@ -11,8 +10,10 @@ export const Hero = styled.section`
   border-top-left-radius: 2.625rem;
   border-top-right-radius: 2.625rem;
 
-  @media (max-width: 400px) {
-    max-height: 146px;
+  max-height: 146px;
+
+  @media (min-width: 400px) {
+    max-height: 548px;
   }
 `
 export const HeroData = styled.div`
@@ -32,31 +33,73 @@ export const HeroData = styled.div`
     margin-bottom: 1.125rem;
     max-width: 125px;
   }
+  @media (min-width: 400px) {
+    align-self: center;
+    justify-self: center;
+    padding-left: 6rem;
+
+    h2 {
+      font-size: ${(props) => props.theme['font-title-xxl']};
+    }
+
+    p {
+      font-size: ${(props) => props.theme['font-title-m']};
+      max-width: 75%;
+      letter-spacing: 1.125px;
+    }
+  }
 `
 export const SearchBar = styled.div`
   background-color: ${(props) => props.theme.white};
   padding: 8px 0;
   border-radius: 1rem;
-  width: 5.625rem;
+  width: 90px;
+  height: 30px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
   input {
-    max-width: 50%;
+    width: 50px;
+    height: 30px;
     border: none;
     outline: none;
     color: ${(props) => props.theme['gray-800']};
     font-family: ${(props) => props.theme['font-normal']};
     font-size: 0.75rem;
     font-weight: 500;
+
+    &::placeholder {
+      color: ${(props) => props.theme['gray-800']};
+      font-family: ${(props) => props.theme['font-normal']};
+      font-size: 0.75rem;
+      font-weight: 500;
+    }
   }
 
   svg {
     color: ${(props) => props.theme['gray-800']};
   }
-`
+  @media (min-width: 400px) {
+    width: 394px;
+    height: 70px;
+    justify-content: space-between;
+    padding: 8px 30px;
+    border-radius: 59px;
+    input {
+      font-size: ${(props) => props.theme['font-text-l']};
+      width: 100%;
+      &::placeholder {
+        font-size: ${(props) => props.theme['font-text-l']};
+      }
+    }
 
+    svg {
+      font-size: ${(props) => props.theme['font-text-xl']};
+    }
+  }
+`
 export const HeroImage = styled.div`
   width: 50%;
   text-align: right;
@@ -67,34 +110,54 @@ export const HeroImage = styled.div`
   }
 `
 export const WhyHaveCat = styled.section`
-  h2 {
-    display: flex;
-    flex-direction: column;
-    gap: 1rem;
-    font-size: ${(props) => props.theme['font-title-l']};
-    font-family: ${(props) => props.theme['font-normal']};
-    font-weight: 700;
-    line-height: normal;
-    margin-bottom: 2.5rem;
+  div {
+    h2 {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      font-size: ${(props) => props.theme['font-title-l']};
+      font-family: ${(props) => props.theme['font-normal']};
+      font-weight: 700;
+      line-height: normal;
+      margin-bottom: 2.5rem;
 
-    &::before {
-      content: '';
-      width: 40px;
-      height: 3px;
-      background-color: ${(props) => props.theme['gray-600']};
+      &::before {
+        content: '';
+        width: 40px;
+        height: 3px;
+        background-color: ${(props) => props.theme['gray-600']};
+      }
+    }
+
+    p {
+      color: ${(props) => props.theme['gray-800']};
+      font-family: ${(props) => props.theme['font-normal']};
+      font-size: ${(props) => props.theme['font-text-l']};
+      font-weight: 500;
+      line-height: normal;
+      margin-bottom: 1.5rem;
     }
   }
+  @media (min-width: 400px) {
+    display: flex;
+    align-items: center;
+    gap: 4rem;
+    padding: 0 6rem;
 
-  p {
-    color: ${(props) => props.theme['gray-800']};
-    font-family: ${(props) => props.theme['font-normal']};
-    font-size: ${(props) => props.theme['font-text-l']};
-    font-weight: 500;
-    line-height: normal;
-    margin-bottom: 1.5rem;
+    div {
+      h2 {
+        font-size: ${(props) => props.theme['font-title-xl']};
+        &::before {
+          width: 68px;
+        }
+      }
+
+      p {
+        margin-bottom: 4rem;
+      }
+    }
   }
 `
-
 export const BtnReadMore = styled.a`
   color: ${(props) => props.theme['gray-700']};
   font-family: ${(props) => props.theme['font-normal']};
@@ -108,8 +171,14 @@ export const BtnReadMore = styled.a`
   display: flex;
   align-items: center;
   gap: 0.5rem;
-`
 
+  @media (min-width: 400px) {
+    font-size: ${(props) => props.theme['font-text-l']};
+    svg {
+      font-size: ${(props) => props.theme['font-text-xl']};
+    }
+  }
+`
 export const Gallery = styled.div`
   margin-top: 4rem;
   display: grid;
@@ -133,5 +202,18 @@ export const Gallery = styled.div`
   & img:nth-child(3) {
     max-width: 122px;
     justify-self: flex-end;
+  }
+  @media (min-width: 400px) {
+    & img:first-child {
+      max-width: 273px;
+    }
+    & img:nth-child(2) {
+      max-width: 238px;
+    }
+    & img:nth-child(3) {
+      max-width: 195px;
+    }
+
+    margin-bottom: 6rem;
   }
 `

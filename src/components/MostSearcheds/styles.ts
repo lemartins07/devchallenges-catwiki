@@ -34,6 +34,22 @@ export const MostSearchedsContainer = styled.section`
     font-size: ${(props) => props.theme['font-title-s']};
     font-weight: 700;
   }
+
+  @media (min-width: 400px) {
+    padding: 1.5rem 6rem 6rem;
+    gap: 2.875rem;
+    strong {
+      font-size: ${(props) => props.theme['font-text-l']};
+      &::after {
+        width: 60px;
+      }
+    }
+
+    h2 {
+      font-size: ${(props) => props.theme['font-title-xl']};
+      line-height: normal;
+    }
+  }
 `
 
 export const Gallery = styled.div`
@@ -66,16 +82,24 @@ export const Gallery = styled.div`
       object-fit: cover;
       border-radius: 12px;
       margin-bottom: 0.75rem;
-      @media (min-width: 400px) {
-        width: 220px;
-        height: 220px;
-      }
     }
     p {
       color: ${(props) => props.theme['gray-800']};
       font-family: ${(props) => props.theme['font-normal']};
       font-size: ${(props) => props.theme['font-text-s']};
       font-weight: 600;
+    }
+  }
+
+  @media (min-width: 400px) {
+    div {
+      img {
+        width: 220px;
+        height: 220px;
+      }
+      p {
+        font-size: ${(props) => props.theme['font-text-l']};
+      }
     }
   }
 `

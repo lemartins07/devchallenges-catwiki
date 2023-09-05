@@ -39,4 +39,17 @@ export const FooterContainer = styled.footer`
   .devchallenge {
     text-decoration: none;
   }
+
+  @media (min-width: 400px) {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 6rem;
+    padding-top: 2.25rem;
+    padding-right: 2rem;
+
+    p {
+      font-size: ${(props) => props.theme['font-text-l']};
+    }
+  }
 `

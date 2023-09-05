@@ -11,18 +11,18 @@ export const defaultTheme = {
 
   'yellow-500': '#DEC68B',
 
-  'font-title-xxl': '4rem',
-  'font-title-xl': '3rem',
-  'font-title-l': '2.5rem',
-  'font-title-m': '1.5rem',
-  'font-title-s': '1.25rem',
-  'font-title-xs': '1.125rem',
+  'font-title-xxl': '4rem', // 64px
+  'font-title-xl': '3rem', // 48px
+  'font-title-l': '2.5rem', // 40px
+  'font-title-m': '1.5rem', // 24px
+  'font-title-s': '1.25rem', // 20px
+  'font-title-xs': '1.125rem', // 18px
 
-  'font-text-xl': '1.25rem',
-  'font-text-l': '1.125rem',
-  'font-text-m': '1rem',
-  'font-text-s': '0.875rem',
-  'font-text-xs': '0.625rem',
+  'font-text-xl': '1.25rem', // 20xp
+  'font-text-l': '1.125rem', // 18px
+  'font-text-m': '1rem', // 16px
+  'font-text-s': '0.875rem', // 14px
+  'font-text-xs': '0.625rem', // 10px
 
   'font-display': '"Mystery Quest", cursive',
   'font-normal': 'Montserrat, sans-serif',

@@ -24,7 +24,7 @@ export function Home() {
           <p>Get to know more about your cat breed</p>
           <SearchBar>
             <input type="text" placeholder="Search" />
-            <MagnifyingGlass size={15} />
+            <MagnifyingGlass />
           </SearchBar>
         </HeroData>
         <HeroImage>
@@ -33,15 +33,17 @@ export function Home() {
       </Hero>
       <MostSearcheds />
       <WhyHaveCat>
-        <h2>Why should you have a cat?</h2>
-        <p>
-          Having a cat around you can actually trigger the release of calming
-          chemicals in your body which lower your stress and anxiety leves
-        </p>
-        <BtnReadMore>
-          READ MORE
-          <ArrowRight size={15} />
-        </BtnReadMore>
+        <div>
+          <h2>Why should you have a cat?</h2>
+          <p>
+            Having a cat around you can actually trigger the release of calming
+            chemicals in your body which lower your stress and anxiety leves
+          </p>
+          <BtnReadMore>
+            READ MORE
+            <ArrowRight />
+          </BtnReadMore>
+        </div>
         <Gallery>
           <img src={img2} alt="Imagem 2" />
 

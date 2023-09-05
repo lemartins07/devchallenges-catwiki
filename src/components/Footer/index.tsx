@@ -9,7 +9,7 @@ export function Footer() {
         <p>
           <span className="copyright">©</span> created by{' '}
           <a className="user" href="#">
-            username
+            lemartins07
           </a>{' '}
           -{' '}
           <a className="devchallenge" href="#">
