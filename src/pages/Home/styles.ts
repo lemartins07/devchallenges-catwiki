@@ -1,25 +1,28 @@
 import { styled } from 'styled-components'
 
 export const HomeContainer = styled.div`
-  max-width: 1248px;
+  width: 100%;
 `
 export const Hero = styled.section`
-  display: flex;
-  justify-content: space-between;
   background-color: ${(props) => props.theme['gray-900']};
   border-top-left-radius: 2.625rem;
   border-top-right-radius: 2.625rem;
 
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   max-height: 146px;
+  justify-content: space-between;
 
-  @media (min-width: 400px) {
-    max-height: 548px;
+  @media (min-width: 425px) {
+    max-height: 538px;
+    align-items: center;
   }
 `
 export const HeroData = styled.div`
   color: ${(props) => props.theme.white};
-  padding: 1.25rem 0 1.5rem 1.875rem;
-  width: 50%;
+  padding-top: 1.25rem;
+  padding-left: 1.875rem;
+
   h2 {
     font-size: ${(props) => props.theme['font-text-s']};
     font-family: ${(props) => props.theme['font-display']};
@@ -33,19 +36,32 @@ export const HeroData = styled.div`
     margin-bottom: 1.125rem;
     max-width: 125px;
   }
-  @media (min-width: 400px) {
-    align-self: center;
-    justify-self: center;
-    padding-left: 6rem;
 
+  @media (min-width: 425px) {
+    max-height: 538px;
+    padding-left: 3rem;
+    h2 {
+      font-size: ${(props) => props.theme['font-title-xl']};
+    }
+
+    p {
+      font-size: ${(props) => props.theme['font-text-s']};
+      max-width: 100%;
+      letter-spacing: 1.125px;
+    }
+  }
+
+  @media (min-width: 768px) {
+    padding-left: 6rem;
     h2 {
       font-size: ${(props) => props.theme['font-title-xxl']};
     }
 
     p {
-      font-size: ${(props) => props.theme['font-title-m']};
-      max-width: 75%;
+      font-size: ${(props) => props.theme['font-title-s']};
+      max-width: 320px;
       letter-spacing: 1.125px;
+      margin-bottom: 3.5rem;
     }
   }
 `
@@ -61,7 +77,8 @@ export const SearchBar = styled.div`
   justify-content: center;
 
   input {
-    width: 50px;
+    max-width: 50px;
+    width: 100%;
     height: 30px;
     border: none;
     outline: none;
@@ -81,15 +98,17 @@ export const SearchBar = styled.div`
   svg {
     color: ${(props) => props.theme['gray-800']};
   }
-  @media (min-width: 400px) {
-    width: 394px;
-    height: 70px;
+
+  @media (min-width: 425px) {
+    width: 100%;
+    height: 35px;
     justify-content: space-between;
     padding: 8px 30px;
     border-radius: 59px;
     input {
       font-size: ${(props) => props.theme['font-text-l']};
       width: 100%;
+      max-width: 100%;
       &::placeholder {
         font-size: ${(props) => props.theme['font-text-l']};
       }
@@ -99,17 +118,29 @@ export const SearchBar = styled.div`
       font-size: ${(props) => props.theme['font-text-xl']};
     }
   }
+
+  @media (min-width: 768px) {
+    height: 70px;
+    max-width: 394px;
+  }
 `
 export const HeroImage = styled.div`
-  width: 50%;
   text-align: right;
+  height: 100%;
+  max-height: 146px;
   img {
-    max-width: 100%;
+    width: 100%;
     height: 100%;
+    max-height: 538px;
     border-top-right-radius: 3rem;
+  }
+  @media (min-width: 425px) {
+    max-height: 538px;
   }
 `
 export const WhyHaveCat = styled.section`
+  display: grid;
+  grid-template-columns: 1fr;
   div {
     h2 {
       display: flex;
@@ -138,8 +169,7 @@ export const WhyHaveCat = styled.section`
       margin-bottom: 1.5rem;
     }
   }
-  @media (min-width: 400px) {
-    display: flex;
+  @media (min-width: 768px) {
     align-items: center;
     gap: 4rem;
     padding: 0 6rem;
@@ -157,6 +187,9 @@ export const WhyHaveCat = styled.section`
       }
     }
   }
+  @media (min-width: 1020px) {
+    grid-template-columns: 50% 50%;
+  }
 `
 export const BtnReadMore = styled.a`
   color: ${(props) => props.theme['gray-700']};
@@ -172,7 +205,7 @@ export const BtnReadMore = styled.a`
   align-items: center;
   gap: 0.5rem;
 
-  @media (min-width: 400px) {
+  @media (min-width: 768px) {
     font-size: ${(props) => props.theme['font-text-l']};
     svg {
       font-size: ${(props) => props.theme['font-text-xl']};
@@ -186,34 +219,44 @@ export const Gallery = styled.div`
   gap: 1rem;
   margin-bottom: 1.5rem;
 
-  img {
-    max-width: 100%;
-  }
-
   & img:first-child {
     grid-row: 1/1;
+    justify-self: flex-end;
+    max-width: 172px;
+    width: 100%;
   }
 
   & img:nth-child(2) {
     grid-row: 1/3;
     max-width: 150px;
+    width: 100%;
   }
 
   & img:nth-child(3) {
     max-width: 122px;
+    width: 100%;
     justify-self: flex-end;
   }
-  @media (min-width: 400px) {
+  @media (min-width: 768px) {
     & img:first-child {
       max-width: 273px;
+      width: 100%;
     }
     & img:nth-child(2) {
       max-width: 238px;
+      width: 100%;
     }
     & img:nth-child(3) {
       max-width: 195px;
+      width: 100%;
     }
 
     margin-bottom: 6rem;
+  }
+
+  @media (min-width: 1024px) {
+    & img:nth-child(3) {
+      width: 80%;
+    }
   }
 `

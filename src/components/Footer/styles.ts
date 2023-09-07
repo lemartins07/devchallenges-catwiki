@@ -40,7 +40,7 @@ export const FooterContainer = styled.footer`
     text-decoration: none;
   }
 
-  @media (min-width: 400px) {
+  @media (min-width: 768px) {
     display: flex;
     align-items: center;
     justify-content: space-between;

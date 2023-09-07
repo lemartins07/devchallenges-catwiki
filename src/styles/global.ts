@@ -26,5 +26,17 @@ export const GlobalStyle = createGlobalStyle`
 
   button:not(:disabled):active { 
     transform: translateY(1px);
-  } 
+  }
+
+  @media (max-width:  912px) {
+   html {
+      font-size: 87.5%;      
+    }
+  }
+
+  @media (max-width:  425px) {
+   html {
+      font-size: 100%;      
+    }
+  }
 `

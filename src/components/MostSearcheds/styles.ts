@@ -2,7 +2,7 @@ import { styled } from 'styled-components'
 
 export const MostSearchedsContainer = styled.section`
   background-color: ${(props) => props.theme['gray-300']};
-  padding: 1.125rem 1.875rem 4rem;
+  padding: 1.125rem 1.875rem 4rem; // cima laterais baixo
   border-bottom-left-radius: 2.625rem;
   border-bottom-right-radius: 2.625rem;
   display: flex;
@@ -35,7 +35,12 @@ export const MostSearchedsContainer = styled.section`
     font-weight: 700;
   }
 
-  @media (min-width: 400px) {
+  @media (min-width: 425px) {
+    padding: 1.5rem 3rem 4rem;
+    gap: 2rem;
+  }
+
+  @media (min-width: 768px) {
     padding: 1.5rem 6rem 6rem;
     gap: 2.875rem;
     strong {
@@ -79,6 +84,7 @@ export const Gallery = styled.div`
     img {
       width: 134px;
       height: 134px;
+      //width: 100%;
       object-fit: cover;
       border-radius: 12px;
       margin-bottom: 0.75rem;
@@ -91,11 +97,13 @@ export const Gallery = styled.div`
     }
   }
 
-  @media (min-width: 400px) {
+  @media (min-width: 768px) {
+    gap: 2.9rem;
     div {
       img {
-        width: 220px;
+        max-width: 220px;
         height: 220px;
+        width: 100%;
       }
       p {
         font-size: ${(props) => props.theme['font-text-l']};
