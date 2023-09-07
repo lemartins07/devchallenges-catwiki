@@ -17,21 +17,18 @@ export function MostSearcheds() {
             <p>Nome do Gato</p>
           </NavLink>
         </div>
-
         <div>
           <NavLink to="/details">
             <img src={img1} alt="Imagem 1" />
             <p>Nome do Gato</p>
           </NavLink>
         </div>
-
         <div>
           <NavLink to="/details">
             <img src={img1} alt="Imagem 1" />
             <p>Nome do Gato</p>
           </NavLink>
         </div>
-
         <div>
           <NavLink to="/details">
             <img src={img1} alt="Imagem 1" />
