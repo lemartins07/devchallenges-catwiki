@@ -14,8 +14,30 @@ import { MostSearcheds } from '../../components/MostSearcheds'
 import img1 from '../../assets/image1.png'
 import img2 from '../../assets/image2.png'
 import img3 from '../../assets/image3.png'
+import { useEffect, useState } from 'react'
+
+import catsJson from '../../cats.json'
+
+export interface Cat {
+  reference_image_id: string
+  name: string
+  url?: string
+}
+
+export interface Cats {
+  data: Cat[]
+}
 
 export function Home() {
+  const [cats, setCats] = useState<Cats | null>(null)
+
+  useEffect(() => {
+    async function getData() {
+      await setCats(catsJson)
+    }
+    getData()
+  }, [cats])
+
   return (
     <HomeContainer>
       <Hero>
@@ -31,7 +53,7 @@ export function Home() {
           <img src={heroImg} alt="Hero" />
         </HeroImage>
       </Hero>
-      <MostSearcheds />
+      <MostSearcheds data={cats} />
       <WhyHaveCat>
         <div>
           <h2>Why should you have a cat?</h2>
