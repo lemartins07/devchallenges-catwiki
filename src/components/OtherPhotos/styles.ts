@@ -19,8 +19,11 @@ export const OtherPhotosContainer = styled.div`
 
     img {
       max-width: 278px;
+      max-height: 278px;
       width: 100%;
+      height: 100%;
       border-radius: 24px;
+      object-fit: cover;
     }
   }
 

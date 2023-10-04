@@ -14,8 +14,6 @@ export function CatAttributesItem({
   const spans = Array.from({ length: 5 }, (_, index) => (
     <span key={index} className={index < validNumber ? 'filled' : ''}></span>
   ))
-  console.log(spans)
-
   return (
     <>
       <strong>{attribute}: </strong>

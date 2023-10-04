@@ -103,7 +103,7 @@ export function Details() {
           </div>
         </HeroContainer>
       )}
-      <OtherPhotos />
+      <OtherPhotos breedsId={cat?.breeds[0].id || ''} />
     </DetailsContainer>
   )
 }
