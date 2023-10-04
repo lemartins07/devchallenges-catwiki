@@ -16,7 +16,7 @@ import img2 from '../../assets/image2.png'
 import img3 from '../../assets/image3.png'
 import { useEffect, useState } from 'react'
 
-import catsJson from '../../cats.json'
+import catsJson from '../../cats2.json'
 
 export interface Cat {
   reference_image_id: string
@@ -29,14 +29,15 @@ export interface Cats {
 }
 
 export function Home() {
-  const [cats, setCats] = useState<Cats | null>(null)
+  const [cats, setCats] = useState<Cat[] | []>([])
 
   useEffect(() => {
-    async function getData() {
-      await setCats(catsJson)
+    function getData() {
+      setCats(catsJson)
     }
+
     getData()
-  }, [cats])
+  }, [])
 
   return (
     <HomeContainer>
