@@ -65,65 +65,6 @@ export const HeroData = styled.div`
     }
   }
 `
-export const SearchBar = styled.div`
-  background-color: ${(props) => props.theme.white};
-  padding: 8px 0;
-  border-radius: 1rem;
-  width: 90px;
-  height: 30px;
-
-  display: flex;
-  align-items: center;
-  justify-content: center;
-
-  input {
-    max-width: 50px;
-    width: 100%;
-    height: 30px;
-    border: none;
-    outline: none;
-    color: ${(props) => props.theme['gray-800']};
-    font-family: ${(props) => props.theme['font-normal']};
-    font-size: 0.75rem;
-    font-weight: 500;
-
-    &::placeholder {
-      color: ${(props) => props.theme['gray-800']};
-      font-family: ${(props) => props.theme['font-normal']};
-      font-size: 0.75rem;
-      font-weight: 500;
-    }
-  }
-
-  svg {
-    color: ${(props) => props.theme['gray-800']};
-  }
-
-  @media (min-width: 425px) {
-    width: 100%;
-    height: 35px;
-    justify-content: space-between;
-    padding: 8px 30px;
-    border-radius: 59px;
-    input {
-      font-size: ${(props) => props.theme['font-text-l']};
-      width: 100%;
-      max-width: 100%;
-      &::placeholder {
-        font-size: ${(props) => props.theme['font-text-l']};
-      }
-    }
-
-    svg {
-      font-size: ${(props) => props.theme['font-text-xl']};
-    }
-  }
-
-  @media (min-width: 768px) {
-    height: 70px;
-    max-width: 394px;
-  }
-`
 export const HeroImage = styled.div`
   text-align: right;
   height: 100%;

@@ -5,11 +5,10 @@ import {
   HeroData,
   HeroImage,
   HomeContainer,
-  SearchBar,
   WhyHaveCat,
 } from './styles'
 import heroImg from '../../assets/HeroImagemd2.png'
-import { ArrowRight, MagnifyingGlass } from 'phosphor-react'
+import { ArrowRight } from 'phosphor-react'
 import { MostSearcheds } from '../../components/MostSearcheds'
 import img1 from '../../assets/image1.png'
 import img2 from '../../assets/image2.png'
@@ -17,6 +16,7 @@ import img3 from '../../assets/image3.png'
 import { useEffect, useState } from 'react'
 
 import catsJson from '../../cats2.json'
+import { SearchBar } from '../../components/SearchBar'
 
 export interface Cat {
   reference_image_id: string
@@ -45,10 +45,7 @@ export function Home() {
         <HeroData>
           <h2>CatWiki</h2>
           <p>Get to know more about your cat breed</p>
-          <SearchBar>
-            <input type="text" placeholder="Search" />
-            <MagnifyingGlass />
-          </SearchBar>
+          <SearchBar />
         </HeroData>
         <HeroImage>
           <img src={heroImg} alt="Hero" />
