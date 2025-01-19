@@ -89,11 +89,13 @@ export const Gallery = styled.div`
       border-radius: 12px;
       margin-bottom: 0.75rem;
     }
-    p {
+    p,
+    a {
       color: ${(props) => props.theme['gray-800']};
       font-family: ${(props) => props.theme['font-normal']};
       font-size: ${(props) => props.theme['font-text-s']};
       font-weight: 600;
+      text-decoration: none;
     }
   }
 

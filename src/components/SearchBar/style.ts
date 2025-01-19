@@ -63,11 +63,8 @@ export const SearchBarBox = styled.div`
     max-width: 394px;
   }
 `
-interface ResultContainerProps {
-  length: number
-}
 
-export const ResultContainer = styled.div<ResultContainerProps>`
+export const ResultContainer = styled.div`
   background-color: ${(props) => props.theme.white};
   position: absolute;
   z-index: 1;
@@ -102,7 +99,12 @@ export const ResultContainer = styled.div<ResultContainerProps>`
 
     ul {
       list-style: none;
-
+      a {
+        font-size: ${(props) => props.theme['font-text-l']};
+        color: ${(props) => props.theme['gray-800']};
+        font-family: ${(props) => props.theme['font-normal']};
+        text-decoration: none;
+      }
       li {
         height: 56px;
         border-radius: 12px;
